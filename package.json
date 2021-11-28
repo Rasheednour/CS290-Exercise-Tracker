@@ -1,0 +1,16 @@
+{
+  "name": "assignment_6",
+  "version": "1.0.0",
+  "description": "Exercise Tracker",
+  "main": "exercise_controller.mjs",
+  "scripts": {
+    "start": "nodemon exercise_controller.mjs"
+  },
+  "author": "Rasheed Mohammed",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "nodemon": "^2.0.15"
+  }
+}
