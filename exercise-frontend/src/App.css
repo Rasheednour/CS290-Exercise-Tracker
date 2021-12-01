@@ -29,8 +29,8 @@
 }
 
 .button1{
-  border: 0.1em solid rgb(129, 20, 20);
-  padding: .30em 0.3em;
+  border: 3px solid rgb(129, 20, 20);
+  padding: 6px 20px;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.2em;
   text-decoration: none;
@@ -43,18 +43,23 @@
 }
 
 .button1:hover{
-  color:rgb(255, 255, 255);
+  color:rgb(87, 47, 47);
   background-color: rgb(148, 17, 17);
   border: 0.1em solid rgb(148, 11, 11);
 }
 
 
+th{
+  border: 2px solid rgb(136, 10, 10);
+  background-color: rgb(23, 94, 5);
+  color: black;
+  border-spacing: .3em;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: .20em 0.30em;
+  border-radius: 0.10em;
+}
+
+table{
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
