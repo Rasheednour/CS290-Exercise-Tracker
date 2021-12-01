@@ -49,7 +49,7 @@
 }
 
 
-th{
+th, td{
   border: 2px solid rgb(136, 10, 10);
   background-color: rgb(23, 94, 5);
   color: black;
