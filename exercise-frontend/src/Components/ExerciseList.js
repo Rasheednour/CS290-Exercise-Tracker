@@ -20,7 +20,6 @@ function ExerciseList({ exercises }) {
             {exercises.map((exercise, i) => <Exercise exercise={exercise}
                 key={i} />)}
         </tbody>
-
     </table>
   );
 }

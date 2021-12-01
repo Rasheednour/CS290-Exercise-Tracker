@@ -4,12 +4,21 @@ import '../App.css';
 
 function CreatePage() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
         <h1 className="h1">
           Create new exercise!
         </h1>
-      </header>
+        <table id="exercises">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Reps</th>
+                <th>Weight</th>
+                <th>Unit</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        </table>
     </div>
   );
 }

@@ -54,7 +54,7 @@ th, td{
   background-color: rgb(23, 94, 5);
   color: black;
   border-spacing: .3em;
-
+  justify-content: center;
   padding: .20em 0.30em;
   border-radius: 0.10em;
 }
@@ -62,4 +62,6 @@ th, td{
 table{
   margin-bottom: 0.5em;
   margin-top: 0.5em;
+  justify-content: center;
+  justify-self: center;
 }
