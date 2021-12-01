@@ -2,7 +2,7 @@ import React from "react";
 import { MdDeleteForever as Delete} from 'react-icons/md';
 import { MdEdit as Edit} from 'react-icons/md';
 
-function Exercise({ exercise }) {
+function Exercise({ exercise, onDelete }) {
     return (
         <tr>
             <td>{exercise.name}</td>
@@ -10,7 +10,7 @@ function Exercise({ exercise }) {
             <td>{exercise.weight}</td>
             <td>{exercise.unit}</td>
             <td>{exercise.date}</td>
-            <td><Delete /></td>
+            <td><Delete onClick={ () => onDelete(exercise._id)}/></td>
             <td><Edit /></td>
         </tr>
     )
