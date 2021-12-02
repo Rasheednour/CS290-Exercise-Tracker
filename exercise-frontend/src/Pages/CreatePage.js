@@ -10,7 +10,7 @@ export const CreatePage = () => {
   const [unit, setUnit] = useState('');
   const [date, setDate] = useState('');
   const history = useHistory();
-  
+
   const addExercise = async () => {
     const newExercise = {name, reps, weight, unit, date}
     const response = await fetch('/exercises', {
@@ -79,7 +79,7 @@ export const CreatePage = () => {
             </td>
             <td>
               <input
-                type="number"
+                type="string"
                 placeholder="Enter date here"
                 value={date}
                 onChange={e => setDate(e.target.value)}
