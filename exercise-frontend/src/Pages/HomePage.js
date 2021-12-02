@@ -5,9 +5,10 @@ import ExerciseList from '../Components/ExerciseList';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-function HomePage() {
+function HomePage({ setExerciseToEdit }) {
 
   const [exercises, setExercises ] = useState([]);
+  const history = useHistory();
 
   const onDelete = async _id => {
     const response = await fetch(`/exercises/${_id}`, { method: 'DELETE'});
@@ -17,6 +18,11 @@ function HomePage() {
       console.error(`Failed to delete movie with _id = ${_id}, status code = ${response.status}`)
     }
   };
+
+  const onEdit = exercise => {
+    setExerciseToEdit(exercise);
+    history.push("/edit-exercise");
+  }
 
   const loadExercises = async () => {
     const response = await fetch('/exercises');
@@ -35,7 +41,7 @@ function HomePage() {
           Exercise Tracker!
         </h1>
         <h2> List of Exercises 
-            <ExerciseList exercises={exercises} onDelete={onDelete}></ExerciseList>
+            <ExerciseList exercises={exercises} onDelete={onDelete} onEdit={onEdit}></ExerciseList>
             <Link to="/create-exercise" className="button1">
             Create exercise
             </Link>

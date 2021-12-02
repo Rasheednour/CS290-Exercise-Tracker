@@ -43,7 +43,7 @@
 }
 
 .button1:hover{
-  color:rgb(87, 47, 47);
+  color:rgb(255, 255, 255);
   background-color: rgb(148, 17, 17);
   border: 0.1em solid rgb(148, 11, 11);
 }
