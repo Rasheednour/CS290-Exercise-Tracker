@@ -70,12 +70,13 @@ export const CreatePage = () => {
               />
             </td>
             <td>
-              <input
-                type="text"
-                placeholder="Enter weight unit here"
-                value={unit}
-                onChange={e => setUnit(e.target.value)}
-              />
+              <select
+                value = {unit}
+                onChange= {e => setUnit(e.target.value)}
+              >
+                <option value="kg">kg</option>
+                <option value="lbs">lbs</option>
+              </select>
             </td>
             <td>
               <input
