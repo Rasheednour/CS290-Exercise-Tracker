@@ -7,7 +7,7 @@ export const CreatePage = () => {
   const [name, setName] = useState('');
   const [reps, setReps] = useState('');
   const [weight, setWeight] = useState('');
-  const [unit, setUnit] = useState('');
+  const [unit, setUnit] = useState('kg');
   const [date, setDate] = useState('');
   const history = useHistory();
 
