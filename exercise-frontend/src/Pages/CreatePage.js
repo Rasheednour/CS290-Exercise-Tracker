@@ -89,7 +89,7 @@ export const CreatePage = () => {
           </tr>
         </tbody>
         </table>
-        <button
+        <button className="button1"
         onClick={addExercise}>
           Add Exercise
           </button>

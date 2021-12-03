@@ -31,7 +31,7 @@ export const EditPage = ({exerciseToEdit}) => {
   return (
     <div>
         <h1>
-          Create new exercise!
+          Edit Exercise
         </h1>
         <table>
         <thead>
@@ -89,7 +89,7 @@ export const EditPage = ({exerciseToEdit}) => {
           </tr>
         </tbody>
         </table>
-        <button
+        <button className="button1"
         onClick={editExercise}>
           Save
           </button>
