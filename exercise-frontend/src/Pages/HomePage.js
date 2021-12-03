@@ -38,8 +38,8 @@ function HomePage({ setExerciseToEdit }) {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="h1">
-          Exercise Tracker!
+        <h1>
+          Exercise Tracker
         </h1>
         <h2> List of Exercises 
             <ExerciseList exercises={exercises} onDelete={onDelete} onEdit={onEdit}></ExerciseList>
