@@ -40,12 +40,14 @@
   font-size: .8em;
   text-align: center;
   transition: all 0.2s;
+  background-color: transparent;
 }
 
 .button1:hover{
   color:rgb(255, 255, 255);
   background-color: rgb(148, 17, 17);
   border: 0.1em solid rgb(148, 11, 11);
+  cursor:pointer;
 }
 
 
