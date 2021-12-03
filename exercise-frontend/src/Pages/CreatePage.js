@@ -71,8 +71,8 @@ export const CreatePage = () => {
             </td>
             <td>
               <select
-                value = {unit}
-                onChange= {e => setUnit(e.target.value)}
+                value={unit}
+                onChange={e => setUnit(e.target.value)}
               >
                 <option value="kg">kg</option>
                 <option value="lbs">lbs</option>

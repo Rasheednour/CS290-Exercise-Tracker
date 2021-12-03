@@ -52,7 +52,7 @@ app.put("/exercises/:_id", (req, res) => {
 app.delete("/exercises/:_id", (req, res) => {
     exercises.deleteExercises(req.params._id)
             .then(() => {
-                res.status(204)
+                res.status(204).send();
             })
             .catch(error => {
                 console.error(error);

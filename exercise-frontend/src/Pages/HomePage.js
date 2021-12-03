@@ -7,13 +7,14 @@ import { useHistory } from 'react-router-dom';
 
 function HomePage({ setExerciseToEdit }) {
 
-  const [exercises, setExercises ] = useState([]);
+  const [exercises, setExercises] = useState([]);
   const history = useHistory();
 
   const onDelete = async _id => {
     const response = await fetch(`/exercises/${_id}`, { method: 'DELETE'});
     if(response.status === 204){
-      setExercises(exercises.filter(exercise => exercise._id !== _id));
+      console.log(response.status)
+      setExercises(exercises.filter(e => e._id !== _id));
     } else {
       console.error(`Failed to delete movie with _id = ${_id}, status code = ${response.status}`)
     }
@@ -22,7 +23,7 @@ function HomePage({ setExerciseToEdit }) {
   const onEdit = exercise => {
     setExerciseToEdit(exercise);
     history.push("/edit-exercise");
-  }
+  };
 
   const loadExercises = async () => {
     const response = await fetch('/exercises');
