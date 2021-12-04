@@ -2,13 +2,15 @@ import React from 'react';
 import '../App.css';
 import { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export const CreatePage = () => {
   const [name, setName] = useState('');
   const [reps, setReps] = useState('');
   const [weight, setWeight] = useState('');
   const [unit, setUnit] = useState('kg');
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(null);
   const history = useHistory();
 
   const addExercise = async () => {
@@ -79,11 +81,11 @@ export const CreatePage = () => {
               </select>
             </td>
             <td>
-              <input
-                type="string"
-                placeholder="Enter date here"
-                value={date}
-                onChange={e => setDate(e.target.value)}
+              <DatePicker
+                selected={date}
+                onChange={d => setDate(d)}
+                placeholderText="Select a date"
+                dateFormat="MM/dd/yyyy"
               />
             </td>
           </tr>
