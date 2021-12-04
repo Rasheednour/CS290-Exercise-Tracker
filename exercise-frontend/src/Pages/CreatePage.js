@@ -83,9 +83,10 @@ export const CreatePage = () => {
             <td>
               <DatePicker
                 selected={date}
-                onChange={d => setDate(d)}
+                onChange={d => {
+                  d.setHours((-1 * d.getTimezoneOffset())/60);
+                  setDate(d);}}
                 placeholderText="Select a date"
-                dateFormat="MM/dd/yyyy"
               />
             </td>
           </tr>
